@@ -1,0 +1,13 @@
+[package]
+name = "template-poem"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+async-graphql = { version = "7.0.17", features = ["opentelemetry"] }
+async-graphql-poem = "7.0.17"
+opentelemetry = "0.27.0"
+opentelemetry_sdk = { version = "0.27.0", features = ["rt-tokio"] }
+opentelemetry-stdout = { version = "0.27.0", features = ["trace"] }
+poem = "3.1.11"
+tokio = { version = "1.46.1", features = ["full"] }
