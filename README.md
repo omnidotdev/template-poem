@@ -1,4 +1,4 @@
-# 🎭 Poem GraphQL API Template
+# 📜 Poem GraphQL API Template
 
 This is a template repository for a GraphQL API built with [Poem](https://github.com/poem-web/poem) and [async-graphql](https://github.com/async-graphql/async-graphql) in Rust.
 
