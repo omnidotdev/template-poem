@@ -15,9 +15,6 @@ impl QueryRoot {
     }
 }
 
-// TODO TLS
-// TODO Postgres + Postgraphile
-
 #[tokio::main]
 async fn main() -> Result<(), std::io::Error> {
     // build OTEL provider
@@ -36,10 +33,8 @@ async fn main() -> Result<(), std::io::Error> {
         .at("/graphql", post(GraphQL::new(schema.clone())))
         .data(schema);
 
-    // TODO "started" logging instead of starting
-
-    println!("🚀 Poem server starting at http://0.0.0.0:3000");
-    println!("🚀 GraphQL server starting at http://0.0.0.0:3000/graphql");
+    println!("Poem server started at http://0.0.0.0:3000");
+    println!("GraphQL endpoint at http://0.0.0.0:3000/graphql");
 
     Server::new(TcpListener::bind("0.0.0.0:3000"))
         .run(app)

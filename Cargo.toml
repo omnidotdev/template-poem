@@ -1,7 +1,20 @@
 [package]
-name = "template-poem"
+name = "{{project-name}}"
 version = "0.1.0"
 edition = "2024"
+rust-version = "1.85"
+authors = ["Omni <team@omni.dev>"]
+description = "{{description}}"
+license = "MIT"
+repository = "https://github.com/omnidotdev/{{project-name}}"
+homepage = "https://{{project-name}}.omni.dev"
+keywords = []
+categories = ["web-programming::http-server"]
+readme = "README.md"
+
+[[bin]]
+name = "{{binary-name}}"
+path = "src/main.rs"
 
 [dependencies]
 async-graphql = { version = "7.0.17", features = ["opentelemetry"] }
@@ -10,4 +23,23 @@ opentelemetry = "0.27.0"
 opentelemetry_sdk = { version = "0.27.0", features = ["rt-tokio"] }
 opentelemetry-stdout = { version = "0.27.0", features = ["trace"] }
 poem = "3.1.11"
+thiserror = "2"
 tokio = { version = "1.46.1", features = ["full"] }
+
+[profile.release]
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
+
+[lints.rust]
+unsafe_code = "forbid"
+
+[lints.clippy]
+all = { level = "deny", priority = -1 }
+pedantic = { level = "deny", priority = -1 }
+nursery = { level = "warn", priority = -1 }
+cargo = { level = "warn", priority = -1 }
+module_name_repetitions = "allow"
+multiple_crate_versions = "allow"
+cargo_common_metadata = "allow"
