@@ -1370,6 +1370,7 @@ dependencies = [
  "opentelemetry-stdout",
  "opentelemetry_sdk",
  "poem",
+ "thiserror 2.0.12",
  "tokio",
 ]
 

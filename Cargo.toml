@@ -1,19 +1,19 @@
 [package]
-name = "{{project-name}}"
+name = "template-poem"
 version = "0.1.0"
 edition = "2024"
 rust-version = "1.85"
 authors = ["Omni <team@omni.dev>"]
-description = "{{description}}"
+description = "Poem API template"
 license = "MIT"
-repository = "https://github.com/omnidotdev/{{project-name}}"
-homepage = "https://{{project-name}}.omni.dev"
+repository = "https://github.com/omnidotdev/template-poem"
+homepage = "https://template-poem.omni.dev"
 keywords = []
 categories = ["web-programming::http-server"]
 readme = "README.md"
 
 [[bin]]
-name = "{{binary-name}}"
+name = "template-poem"
 path = "src/main.rs"
 
 [dependencies]

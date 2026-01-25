@@ -27,7 +27,7 @@ WORKDIR /app
 
 RUN apt-get update && apt-get install -y ca-certificates && rm -rf /var/lib/apt/lists/*
 
-COPY --from=builder /app/target/release/{{binary-name}} ./app
+COPY --from=builder /app/target/release/template-poem ./app
 
 ENV RUST_LOG=info
 EXPOSE 3000
