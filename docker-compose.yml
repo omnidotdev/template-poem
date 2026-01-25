@@ -1,0 +1,7 @@
+services:
+  api:
+    build: .
+    environment:
+      RUST_LOG: ${RUST_LOG:-info}
+    ports:
+      - "${API_PORT:-3000}:3000"
