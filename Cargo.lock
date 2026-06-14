@@ -65,7 +65,7 @@ dependencies = [
  "mime",
  "multer",
  "num-traits",
- "opentelemetry",
+ "opentelemetry 0.27.1",
  "pin-project-lite",
  "regex",
  "serde",
@@ -229,6 +229,12 @@ checksum = "d71b6127be86fdcfddb610f7182ac57211d4b18a3e9c82eb2d17662f2227ad6a"
 dependencies = [
  "serde",
 ]
+
+[[package]]
+name = "cargo-husky"
+version = "1.5.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "7b02b629252fe8ef6460461409564e2c21d0c8e77e0944f3d189ff06c4e932ad"
 
 [[package]]
 name = "cfg-if"
@@ -827,6 +833,20 @@ dependencies = [
 ]
 
 [[package]]
+name = "opentelemetry"
+version = "0.32.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b0142c63252a9e054e68a4c61a5778f7b14f576274d593f8ce883d191a099682"
+dependencies = [
+ "futures-core",
+ "futures-sink",
+ "js-sys",
+ "pin-project-lite",
+ "thiserror 2.0.12",
+ "tracing",
+]
+
+[[package]]
 name = "opentelemetry-stdout"
 version = "0.27.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -835,7 +855,7 @@ dependencies = [
  "async-trait",
  "chrono",
  "futures-util",
- "opentelemetry",
+ "opentelemetry 0.27.1",
  "opentelemetry_sdk",
  "ordered-float",
  "serde",
@@ -854,7 +874,7 @@ dependencies = [
  "futures-executor",
  "futures-util",
  "glob",
- "opentelemetry",
+ "opentelemetry 0.27.1",
  "percent-encoding",
  "rand 0.8.5",
  "serde_json",
@@ -1366,7 +1386,8 @@ version = "0.1.0"
 dependencies = [
  "async-graphql",
  "async-graphql-poem",
- "opentelemetry",
+ "cargo-husky",
+ "opentelemetry 0.32.0",
  "opentelemetry-stdout",
  "opentelemetry_sdk",
  "poem",
